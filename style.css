@@ -1,0 +1,525 @@
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   BODY
+========================================= */
+
+body {
+    min-height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            #302542 0%,
+            #120d1c 45%,
+            #050409 100%
+        );
+
+    color: #ffffff;
+
+    font-family: "Montserrat", sans-serif;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================================
+   BACKGROUND
+========================================= */
+
+.background-glow {
+    position: fixed;
+
+    width: 500px;
+    height: 500px;
+
+    top: -250px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    background: rgba(201, 164, 92, 0.10);
+
+    border-radius: 50%;
+
+    filter: blur(100px);
+
+    pointer-events: none;
+}
+
+
+.stars {
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    background-image:
+        radial-gradient(circle, rgba(255,255,255,0.35) 1px, transparent 1px);
+
+    background-size: 80px 80px;
+
+    opacity: 0.18;
+}
+
+
+/* =========================================
+   MAIN
+========================================= */
+
+main {
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 50px 20px;
+
+    text-align: center;
+}
+
+
+section {
+    width: 100%;
+
+    max-width: 900px;
+
+    animation: fadeIn 1.8s ease;
+}
+
+
+/* =========================================
+   TEXT
+========================================= */
+
+.small-text {
+    font-size: 12px;
+
+    letter-spacing: 5px;
+
+    text-transform: uppercase;
+
+    color: #c9a45c;
+
+    margin-bottom: 28px;
+}
+
+
+h1 {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(48px, 8vw, 90px);
+
+    font-weight: 500;
+
+    line-height: 0.95;
+
+    margin-bottom: 30px;
+}
+
+
+.intro {
+    max-width: 650px;
+
+    margin: auto;
+
+    color: #c9c3cf;
+
+    font-size: 15px;
+
+    line-height: 1.9;
+
+    font-weight: 300;
+}
+
+
+/* =========================================
+   COUNTDOWN
+========================================= */
+
+#countdown {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 18px;
+
+    margin: 55px 0 40px;
+
+    flex-wrap: wrap;
+}
+
+
+.time-box {
+    width: 125px;
+
+    padding: 23px 10px;
+
+    border: 1px solid rgba(201, 164, 92, 0.35);
+
+    background: rgba(255,255,255,0.035);
+
+    backdrop-filter: blur(12px);
+
+    border-radius: 8px;
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,0.25);
+
+    transition: 0.3s ease;
+}
+
+
+.time-box:hover {
+    transform: translateY(-5px);
+
+    border-color: rgba(201,164,92,0.7);
+}
+
+
+.time-box span {
+    display: block;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 50px;
+
+    color: #c9a45c;
+}
+
+
+.time-box small {
+    display: block;
+
+    margin-top: 5px;
+
+    color: #999;
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+
+    font-size: 9px;
+}
+
+
+/* =========================================
+   LOCKED MESSAGE
+========================================= */
+
+.locked-message {
+    margin-top: 20px;
+
+    color: #aaa;
+
+    font-size: 13px;
+
+    letter-spacing: 1px;
+
+    line-height: 1.8;
+}
+
+
+.locked-message strong {
+    color: #c9a45c;
+
+    font-weight: 500;
+}
+
+
+.locked-message span {
+    color: #777;
+
+    font-size: 11px;
+}
+
+
+.lock-icon {
+    font-size: 25px;
+
+    margin-bottom: 8px;
+
+    opacity: 0.8;
+}
+
+
+/* =========================================
+   HIDDEN
+========================================= */
+
+.hidden {
+    display: none !important;
+}
+
+
+/* =========================================
+   BIRTHDAY
+========================================= */
+
+.heart {
+    font-size: 75px;
+
+    margin-bottom: 15px;
+
+    animation: heartbeat 1.5s infinite;
+}
+
+
+.birthday-title {
+    color: #c9a45c;
+
+    margin-bottom: 15px;
+}
+
+
+h2 {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 42px;
+
+    font-weight: 500;
+
+    margin-bottom: 50px;
+}
+
+
+/* =========================================
+   LETTER
+========================================= */
+
+.letter {
+    text-align: left;
+
+    background: rgba(255,255,255,0.045);
+
+    border: 1px solid rgba(201,164,92,0.25);
+
+    padding: 50px;
+
+    border-radius: 12px;
+
+    backdrop-filter: blur(15px);
+
+    box-shadow:
+        0 25px 80px rgba(0,0,0,0.45);
+}
+
+
+.letter p {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 22px;
+
+    line-height: 1.75;
+
+    color: #ddd7df;
+
+    margin-bottom: 25px;
+}
+
+
+.letter .greeting {
+    color: #c9a45c;
+
+    font-size: 31px;
+
+    margin-bottom: 30px;
+}
+
+
+.special-line {
+    text-align: center;
+
+    color: #ffffff !important;
+
+    font-size: 27px !important;
+
+    margin-top: 45px !important;
+
+    margin-bottom: 45px !important;
+
+    padding: 25px 10px;
+
+    border-top: 1px solid rgba(201,164,92,0.2);
+
+    border-bottom: 1px solid rgba(201,164,92,0.2);
+}
+
+
+.forever {
+    text-align: right;
+
+    color: #c9a45c !important;
+
+    font-size: 28px !important;
+
+    margin-top: 35px;
+}
+
+
+/* =========================================
+   CONFETTI
+========================================= */
+
+.confetti-piece {
+    position: fixed;
+
+    width: 8px;
+
+    height: 14px;
+
+    top: -20px;
+
+    z-index: 999;
+
+    animation:
+        fall 4s linear forwards;
+}
+
+
+@keyframes fall {
+
+    0% {
+        transform:
+            translateY(0)
+            rotate(0deg);
+
+        opacity: 1;
+    }
+
+    100% {
+        transform:
+            translateY(110vh)
+            rotate(720deg);
+
+        opacity: 0;
+    }
+}
+
+
+/* =========================================
+   ANIMATIONS
+========================================= */
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+@keyframes heartbeat {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.22);
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    main {
+        padding: 40px 15px;
+    }
+
+
+    h1 {
+        font-size: 52px;
+    }
+
+
+    .intro {
+        font-size: 14px;
+    }
+
+
+    #countdown {
+        gap: 10px;
+
+        margin-top: 40px;
+    }
+
+
+    .time-box {
+        width: 78px;
+
+        padding: 18px 5px;
+    }
+
+
+    .time-box span {
+        font-size: 35px;
+    }
+
+
+    .time-box small {
+        font-size: 7px;
+
+        letter-spacing: 1px;
+    }
+
+
+    .letter {
+        padding: 28px 22px;
+    }
+
+
+    .letter p {
+        font-size: 20px;
+
+        line-height: 1.65;
+    }
+
+
+    .letter .greeting {
+        font-size: 28px;
+    }
+
+
+    .special-line {
+        font-size: 23px !important;
+    }
+
+
+    .forever {
+        font-size: 25px !important;
+    }
+
+
+    h2 {
+        font-size: 34px;
+    }
+}
